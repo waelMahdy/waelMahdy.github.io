@@ -1,0 +1,7 @@
+AIzaSyBzgEgoYEivWt8icziJlFnRgxWqngfdZbw
+
+
+
+e411bfc304e36e78d8c0206e47fd3453        key open weather
+
+ url:'http://api.openweathermap.org/data/2.5/weather?q='+city+"&units=metric"+"&APPID=e411bfc304e36e78d8c0206e47fd3453",
