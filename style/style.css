@@ -1,0 +1,229 @@
+﻿body {
+    margin: auto;
+    font-family:  'Poppins', helvetica;
+    color: #898989;
+    letter-spacing: 0.02em;
+    box-sizing: border-box;
+}
+
+
+#navBar nav {
+    float: left;
+    position:fixed;
+    right:0;
+}
+ul a {
+    color: #fff;
+    font: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav li {
+    float: left;
+    list-style: none;
+     text-decoration: none;
+    display: inline;
+    padding: 10px 35px 0px 0px;
+}
+ul a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: #CCBAB4;
+}
+ .cartIcon {
+    width: 5%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0; 
+ 
+}
+#header .cartIcon:hover {
+    animation: mymove 0.5s infinite;
+}
+@keyframes mymove{
+    0% {
+        transform: translate(2px,1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px,-2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px,0px) rotate(-1deg);
+    }
+
+   30% {
+        transform: translate(3px,2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px,-1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px,-2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px,1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px,1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px,-1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px,2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px,-2px) rotate(-1deg);
+    }
+    
+}
+
+
+.chevronContainer {
+    position:absolute;
+    top:85%;
+    right:50%;
+    width:24px;
+    height:24px;
+}
+.chevron{
+    position:absolute;
+    width:28px;
+    height:8px;
+    opacity:0;
+    transform:scale3d(.5,.5.5);
+    animation:move 3s ease-out  infinite;
+}
+.chevron:first-child{
+    animation:move 3s ease-out 1s infinite; 
+}
+.chevron:nth-child(2){
+    animation:move 3s ease-out 2s infinite; 
+}
+.chevron:before, .chevron:after{
+    content:"";
+    position:absolute;
+    top:0;
+    height:100%;
+    width:51%;
+    background:white;
+}
+.chevron:before{
+    left:0;
+    transform:skew(0deg,30deg);
+}
+    .chevron:after {
+        right: 0;
+        width:50%;
+        transform: skew(0deg,-30deg);
+    }
+    @keyframes move {
+        25%{
+            opacity:1;
+        }
+        33%{
+            opacity:1;
+            transform:translateY(30deg);
+        }
+        67% {
+            opacity: 1;
+            transform: translateY(40deg);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(55px)scale3d(.5,.5,.5);
+        }
+    }
+
+
+
+
+#header {
+    background: #2c3e50;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loading{
+    width:300px;
+    height:300px;
+    box-sizing:border-box;
+    border-radius:50%;
+    border-top:10px solid #e74c3c;
+    position:relative;
+    animation:a1 2s linear infinite;
+
+}
+.loading::before,.loading::after{
+    content:"";
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:0;
+    top:-10px;
+    box-sizing:border-box;
+    border-radius:50%;
+}
+
+    .loading::before{
+    border-top:10px solid #e67e22;
+    transform:rotate(120deg);
+}
+    .loading::after {
+        border-top: 10px solid #3498db;
+        transform: rotate(2400deg);
+    }
+    .loading span{
+        position:absolute;
+        width:300px;
+        height:300px;
+        color:#fff;
+        text-align:center;
+        line-height:300px;
+        font-size:1.5rem;
+        animation:a2 2s linear infinite;
+    }
+    @keyframes a1 {
+        to{
+            transform:rotate(360deg);
+        }
+    }
+    @keyframes a2 {
+        to{
+            transform:rotate(-360deg);
+        }
+    }
+
+    /*--aboutMe--*/
+
+#about {
+    width: 100%;
+    background: #f7f7f7;
+    padding-top: 190px;
+    color: #898989;
+}
+    #about .div-img-bg {
+        padding-bottom: 30px;
+        border: 20px solid #b8a07e;
+       
+    }
+        #about .div-img-bg .about-img img {
+        width: 100%;
+        box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
+        margin-top: -60px;
+        margin-left: 40px;
+        height: 60%vh;
+        object-fit: cover;
+    }
+    #about .p-heading {
+        font-family: 'Playfair Display', serif;
+        font-size: 28px;
+        text-align: left;
+    }
+    #about .about-descr .separator {
+        max-width: 80%;
+        margin-bottom: 0;
+        text-align: left;
+    }
